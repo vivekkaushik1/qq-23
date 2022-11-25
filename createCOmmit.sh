@@ -3,6 +3,7 @@ x=1
 j=1
 while [ $x -le 1000 ]
  do
+   rm -rf randomfile*
    string="touch randomfile$((j+x)) && git add . && git commit -m '$((j+x)):randfile_$((j+x))'"
    echo $string
    eval "$string"
